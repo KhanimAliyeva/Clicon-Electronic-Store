@@ -1,0 +1,759 @@
+/* 1. Ümumi Tənzimləmələr */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    color: #191C1F;
+}
+
+/* 2. Header (Üst Hissə) */
+.top-bar {
+    background-color: #1B6392;
+    color: white;
+    padding: 12px 10%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.top-bar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.settings span {
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+/* Main Header (Logo və Axtarış) */
+.main-header {
+    background-color: #1B6392;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 40px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 3px;
+    border: none;
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #191C1F;
+}
+
+.user-actions {
+    display: flex;
+    gap: 24px;
+}
+
+.user-actions img {
+    width: 24px;
+    cursor: pointer;
+}
+
+/* Naviqasiya (All Category hissəsi) */
+.nav-bar {
+    padding: 16px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E4E7E9;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.category-btn {
+    background-color: #F2F4F5;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #5F6C72;
+}
+
+.nav-links span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.nav-links img {
+    width: 20px;
+}
+
+/* 3. HERO SECTION (Bannerlər - Sizin istədiyiniz hissə) */
+.hero-section {
+    padding: 24px 10%;
+    background-color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Sol geniş, sağ dar */
+    gap: 24px; /* Hissələr arasındakı boşluq */
+    
+}
+
+/* Ümumi Banner Stili */
+.banner {
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* XBOX BANNER (SOL) */
+.xbox-banner {
+    grid-row: span 2; /* Hündürlük sağdakıların cəmi qədər */
+    background-color: #F2F4F5;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.xbox-banner .subtitle {
+    color: #2DA5F3;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.xbox-banner h2 {
+    font-size: 40px;
+    margin: 16px 0;
+}
+
+.xbox-banner .description {
+    font-size: 18px;
+    color: #475156;
+    margin-bottom: 30px;
+    max-width: 350px;
+}
+
+/* Mavi Dairə ($299) */
+.xbox-banner .price-badge {
+    position: absolute;
+    top: 56px;
+    left: 627px; /* Konsolun tam yanında durması üçün */
+    background: #2DA5F3;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 200;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.xbox-banner img {
+    height: 400px;
+}
+
+/* SAĞDAKI BANNERLƏR (Piksel və Buds) */
+.side-banners {
+    display: contents; /* Grid konteynerin birbaşa uşaqları kimi davranırlar */
+}
+
+/* Pixel Banner (Sağ Üst) */
+.pixel-banner {
+    background-color: #191C1F;
+    padding: 32px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pixel-banner .tag {
+    color: #EBC802;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.pixel-banner h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    max-width: 180px;
+}
+
+/* Sarı endirim etiketi */
+.pixel-banner .discount-badge {
+    position: absolute;
+    right: 20px;
+    bottom: 178px;
+    background: #EFD33D;
+    color: #191C1F;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 2px;
+    z-index: 3;
+}
+
+.pixel-banner .banner-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+}
+
+.pixel-banner img {
+    height: 100%;
+}
+
+/* FlipBuds Banner (Sağ Alt) */
+.flipbuds-banner {
+    background-color: #F2F4F5;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.flipbuds-banner img {
+    width: 150px;
+}
+
+.flipbuds-banner .price {
+    color: #2DA5F3;
+    font-weight: 400;
+    margin: 8px 0 16px 0;
+}
+
+/* Düymə Stili (Narıncı) */
+.shop-now {
+    background-color: #FA8232;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+}
+
+
+/* Macbook Alt Banner */
+.macbook-banner {
+    grid-column: 1 / 3; /* Konteynerin tam enini tutur */
+    background-color: #FFE7D6; /* Şəkildəki kremi rəng */
+    border-radius: 6px;
+    padding: 44px 72px; /* Sol tərəfdən daha çox boşluq */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.macbook-banner .banner-content {
+    z-index: 2;
+}
+
+/* "SAVE UP TO..." Mavi Etiketi */
+.macbook-banner .save-tag {
+    background-color: #2DA5F3;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 200;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.macbook-banner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #191C1F;
+    margin-bottom: 12px;
+}
+
+.macbook-banner .description {
+    font-size: 18px;
+    color: #475156;
+    max-width: 380px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+
+
+/* Qiymət Dairəsi ($1999) */
+.macbook-banner .price-badge {
+    position: absolute;
+    right: 260px; /* Macbookun ekranının sol üst küncünə düşməsi üçün */
+    top: -6px;
+    background-color: #FFCEAD; /* Fonla eyni rəng */
+    color: #191C1F;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 40px 20px;
+    font-weight: 600;
+    border: 6px solid white; /* Şəkildəki qalın ağ haşiyə */
+    z-index: 3;
+}
+
+/* Macbook Şəkli */
+.macbook-banner .banner-image {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.macbook-banner .banner-image img {
+    height: 280px; /* Macbookun ölçüsü */
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+/* Ana konteyner */
+.product-showcase {
+    padding: 40px 0;
+    width: 100%;
+    max-width: 1400px; /* Ekranın eninə görə tənzimlə */
+    margin: 0 auto;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 bərabər sütun */
+    gap: 24px;
+}
+
+.showcase-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #191c1f;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* Kartın özü */
+.showcase-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #E4E7E9;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    background: #fff;
+    height: 100px; /* Hündürlüyü sabitləyirik ki, hamısı eyni olsun */
+    width: 100%;   /* Sütunun bütün enini tutsun */
+}
+
+/* Şəkil hissəsi */
+.showcase-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0; /* Şəklin sıxılmasının qarşısını alır */
+    margin-right: 12px;
+}
+
+/* Yazı hissəsi */
+.showcase-info {
+    flex-grow: 1;    /* Boş qalan bütün yeri tutsun */
+    min-width: 0;    /* Ellipsis-in işləməsi üçün vacibdir */
+}
+
+.showcase-info h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #191c1f;
+    margin: 0 0 6px 0;
+    
+    /* Uzun yazıları kəsib üç nöqtə qoyan hissə */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Maksimum 2 sətir göstər */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.showcase-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2DA5F3;
+}
+
+/* All düyməsi mərkəzdə */
+.showcase-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+
+    width: 100%;
+}
+
+.btn-all {
+    background-color: #FA8231;
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background: #0f1419;
+  color: #9ca3af;
+  padding: 80px 0 20px;
+}
+
+.footer-grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr 1.3fr;
+  gap: 50px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+
+.label {
+  color: #6b7280;
+}
+
+.phone {
+  color: #fff;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.address {
+margin-top:10px ;
+  line-height: 1.5;
+}
+
+.email {
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* TITLES */
+.footer-col h4 {
+  color: #fff;
+  uppercase: uppercase; 
+    font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* LINKS */
+.footer-col ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col li:hover {
+  color: white;
+}
+
+/* ACTIVE (Accessories altındakı sarı xətt) */
+.footer-col .active {
+  position: relative;
+  color: white;
+}
+
+.footer-col .active::before {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background: #facc15;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+}
+
+/* Browse link */
+.browse {
+  color: #facc15;
+}
+
+/* STORE BUTTON */
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1f2933;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 170px;
+  transition: 0.3s;
+}
+
+.store-btn img {
+    margin-left: 10px;
+        margin-right: 10px;
+
+  width: 25px;
+}
+
+.store-btn small {
+}
+
+.store-btn span {
+  color: white;
+}
+
+.store-btn:hover {
+  background: #374151;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  border: 1px solid #374151;
+  padding: 5px 10px;
+  transition: 0.2s;
+}
+
+.tags span:hover {
+  border-color: white;
+  color: white;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #1f2933;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.latest-news-section {
+  background-color: #f9f9f9;
+  padding: 80px 30px;
+  width: 100%;
+}
+
+.news-main-header {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.news-container-wrapper {
+  width: 80%;
+  margin: auto;
+}
+.news-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background: #fff;
+  
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card > img {
+  display: block;     
+  margin: 0 auto;      
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  padding-top: 20px;
+  border-radius: 5px;   
+}
+
+.news-content {
+  padding: 20px;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.news-meta i {
+  color: #ff7300;
+}
+
+.news-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.news-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: inline-block;
+  color: #ff7300;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid #ff7300;
+  padding: 15px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #ff7300;
+  color: #fff;
+}

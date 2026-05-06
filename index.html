@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicon Header</title>
+    <!-- İkonlar için Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <span>Welcome to Clicon online eCommerce store.</span>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <span>Follow us:</span>
+                    <a href="#"><img src="./assets/icons/Twitter.png" alt=""></a>
+                    <a href="#"><img src="./assets/icons/Facebook.png" alt=""></a>
+                    <a href="#"><img src="./assets/icons/Pinterest.png" alt=""></a>
+                    <a href="#"><img src="./assets/icons/Reddit.png" alt=""></a>
+                    <a href="#"><img src="./assets/icons/YouTube.png" alt=""></a>
+                    <a href="#"><img src="./assets/icons/Instagram.png" alt=""></a>
+                </div>
+                <div class="settings">
+                    <span>Eng <i class="fas fa-chevron-down"></i></span>
+                    <span>USD <i class="fas fa-chevron-down"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="logo">
+                <img src="./assets/icons/Icon.png" alt="">
+                <h1>CLICON</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search for anything...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-actions">
+                <img src="./assets/icons/ShoppingCartSimple.svg" alt="">
+                <img src="./assets/icons/Heart.png" alt="">
+                <img src="./assets/icons/User.png" alt="">
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-left">
+                <button class="category-btn">All Category <i class="fas fa-chevron-down"></i></button>
+                <div class="nav-links">
+                    <span><img src="./assets/icons/MapPinLine.png" alt="">Track Order</span>
+                    <span><img src="./assets/icons/ArrowsCounterClockwise.png" alt="">Compare</span>
+                    <span><img src="./assets/icons/Headphones.png" alt="">Customer Support</span>
+                    <span><img src="./assets/icons/Info.png" alt="">Need Help</span>
+                </div>
+            </div>
+            <div class="phone-number">
+                <i class="fas fa-phone-alt"></i>
+                <span>+1-202-555-0104</span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="hero-section">
+    <div class="container">
+        <!-- Sol böyük banner: Xbox -->
+        <div class="banner large-banner xbox-banner">
+            <div class="banner-content">
+                <p class="subtitle">— THE BEST PLACE TO PLAY</p>
+                <h2>Xbox Consoles</h2>
+                <p class="description">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
+                <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="banner-image">
+                <img src="./assets/photos/Image (1).png" alt="Xbox">
+                <span class="price-badge">$299</span>
+            </div>
+        </div>
+
+        <!-- Sağ tərəf: İki kiçik banner -->
+        <div class="side-banners">
+            <!-- Google Pixel -->
+            <div class="banner small-banner pixel-banner">
+                <div class="banner-content">
+                    <p class="tag">SUMMER SALES</p>
+                    <h3>New Google Pixel 6 Pro</h3>
+                    <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="banner-image">
+                    <img src="./assets/photos/Image 5.png" alt="Pixel 6">
+                    <span class="discount-badge">29% OFF</span>
+                </div>
+            </div>
+
+            <!-- Xiaomi FlipBuds -->
+            <div class="banner small-banner flipbuds-banner">
+                <div class="banner-image">
+                    <img src="./assets/photos/Image 4.png" alt="FlipBuds">
+                </div>
+                <div class="banner-content">
+                    <h3>Xiaomi <br> FlipBuds Pro</h3>
+                    <p class="price">$299 USD</p>
+                    <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alt böyük banner: Macbook -->
+        <div class="banner large-banner macbook-banner">
+            <div class="banner-content">
+                <span class="save-tag">SAVE UP TO $200.00</span>
+                <h2>Macbook Pro</h2>
+                <p class="description">Apple M1 Max Chip. 32GB Unified Memory, 1TB SSD Storage</p>
+                <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="banner-image">
+                <img src="./assets/photos/Image (2).png" alt="Macbook">
+                <span class="price-badge large">$1999</span>
+            </div>
+        </div>
+    </div>
+    <section class="product-showcase">
+        <div class="container showcase-grid" id="showcase-container">
+            <!-- JS bura məlumatları dolduracaq -->
+        </div>
+        <div class="showcase-footer">
+            <button class="btn-all">ALL &nbsp; <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+</main>
+<section class="latest-news-section">
+    <div class="news-container-wrapper">
+        <!-- Başlıq mərkəzdə -->
+        <div class="news-main-header">
+            <h2>Latest News</h2>
+        </div>
+        
+        <!-- Kartlar şəbəkəsi -->
+        <div class="news-container" id="newsContainer"></div>
+    </div>
+</section>
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- LOGO -->
+    <div class="footer-col">
+      <div class="logo">
+        <img src="./assets/icons/orange.png" alt="">
+        <h2>CLICON</h2>
+      </div>
+
+      <p class="label">Customer Supports:</p>
+      <p class="phone">(629) 555-0129</p>
+
+      <p class="address">
+        4517 Washington Ave.<br>
+        Manchester, Kentucky 39495
+      </p>
+
+      <p class="email">info@kinbo.com</p>
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="footer-col">
+      <h4>TOP CATEGORY</h4>
+      <ul>
+        <li>Computer & Laptop</li>
+        <li>SmartPhone</li>
+        <li>Headphone</li>
+        <li class="active">Accessories</li>
+        <li>Camera & Photo</li>
+        <li>TV & Homes</li>
+        <li class="browse">Browse All Product →</li>
+      </ul>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li>Shop Product</li>
+        <li>Shopping Cart</li>
+        <li>Wishlist</li>
+        <li>Compare</li>
+        <li>Track Order</li>
+        <li>Customer Help</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+
+    <!-- APP -->
+    <div class="footer-col">
+      <h4>DOWNLOAD APP</h4>
+
+      <div class="store-btn">
+        <img src="./assets/icons/Icon=google-play 1.png">
+        <div>
+          <small>Get it now</small>
+          <br>
+          <span>Google Play</span>
+        </div>
+      </div>
+
+      <div class="store-btn">
+        <img src="./assets/icons/Group.png">
+        <div>
+          <small>Get it now</small>
+          <br>
+          <span>App Store</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAG -->
+    <div class="footer-col">
+      <h4>POPULAR TAG</h4>
+      <div class="tags">
+        <span>Game</span>
+        <span>iPhone</span>
+        <span>TV</span>
+        <span>Asus Laptops</span>
+        <span>Macbook</span>
+        <span>SSD</span>
+        <span>Graphics Card</span>
+        <span>Power Bank</span>
+        <span>Smart TV</span>
+        <span>Speaker</span>
+        <span>Tablet</span>
+        <span>Microwave</span>
+        <span>Samsung</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Kinbo - eCommerce Template © 2021. Design by Templatecookie
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
