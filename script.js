@@ -105,7 +105,39 @@ const productsData = [
     ],
   },
 ];
+
+const newsData = [
+  {
+    author: "Kristin",
+    date: "19 Dec, 2013",
+    views: 453,
+    title: "Cras nisl dolor, accumsan et metus sit amet, vulputate condimentum dolor.",
+    text: "Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.",
+    img: "./assets/photos/unsplash_iZVrfElG1t0.png"
+  },
+  {
+    author: "Robert",
+    date: "28 Nov, 2015",
+    views: 738,
+    title: "Curabitur pulvinar aliquam lectus, non blandit erat mattis vitae.",
+    text: "Mauris scelerisque odio id rutrum volutpat. Pellentesque euismod vitae.Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.",
+    img: "./assets/photos/unsplash_6MNmDi1hc_Y.png"
+  },
+  {
+    author: "Arlene",
+    date: "9 May, 2014",
+    views: 826,
+    title: "Curabitur massa orci, consectetur et blandit ac, auctor et tellus.",
+    text: "Pellentesque vestibulum lorem vel gravida aliquam. Morbi porta odio sed suscipit.Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.",
+    img: "./assets/photos/unsplash_FO7JIlwjOtU.png"
+  }
+];
+
+
 const showcaseContainer = document.getElementById('showcase-container');
+const newsContainer = document.getElementById("newsContainer");
+
+
 
 function renderShowcase() {
     let content = '';
@@ -135,37 +167,6 @@ function renderShowcase() {
     showcaseContainer.innerHTML = content;
 }
 
-window.onload = renderShowcase;
-
-
-const newsData = [
-  {
-    author: "Kristin",
-    date: "19 Dec, 2013",
-    views: 453,
-    title: "Cras nisl dolor, accumsan et metus sit amet, vulputate condimentum dolor.",
-    text: "Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.",
-    img: "./assets/photos/unsplash_iZVrfElG1t0.png"
-  },
-  {
-    author: "Robert",
-    date: "28 Nov, 2015",
-    views: 738,
-    title: "Curabitur pulvinar aliquam lectus, non blandit erat mattis vitae.",
-    text: "Mauris scelerisque odio id rutrum volutpat. Pellentesque euismod vitae.Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.",
-    img: "./assets/photos/unsplash_6MNmDi1hc_Y.png"
-  },
-  {
-    author: "Arlene",
-    date: "9 May, 2014",
-    views: 826,
-    title: "Curabitur massa orci, consectetur et blandit ac, auctor et tellus.",
-    text: "Pellentesque vestibulum lorem vel gravida aliquam. Morbi porta odio sed suscipit.Maecenas scelerisque arcu quis tempus egestas. Ligula diam molestie lectus.",
-    img: "./assets/photos/unsplash_FO7JIlwjOtU.png"
-  }
-];
-
-const newsContainer = document.getElementById("newsContainer");
 
 function renderNews() {
   newsContainer.innerHTML = newsData.map(news => `
@@ -188,5 +189,6 @@ function renderNews() {
     </div>
   `).join('');
 }
+window.onload = renderShowcase;
 
 renderNews();
