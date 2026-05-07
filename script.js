@@ -175,7 +175,7 @@ function renderNews() {
       <img src="${news.img}" alt="${news.title}">
       <div class="news-content">
         <div class="news-meta">
-          <img src="./assets/icons/userCircle.png" alt="${news.author}" >
+          <img src="./assets/icons/UserCircle.png" alt="${news.author}" >
           <span>${news.author}</span>
           <img src="./assets/icons/CalendarBlank.png" alt="Date">
           <span>${news.date}</span>
