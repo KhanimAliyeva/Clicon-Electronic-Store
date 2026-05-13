@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicon</title>
-    <link rel="shortcut icon" href="./assets/icons/Icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electronics Products</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
+<style>
+
+</style>
+
+</head>
+
+
+
+<body>
 <header>
           <div class="top-bar">
               <span>Welcome to Clicon online eCommerce store.</span>
@@ -44,6 +51,7 @@
                   <div class="cart-icon">
 
                     <a href="basket.html"><img src="./assets/icons/ShoppingCartSimple.svg" alt=""></a> 
+
                       <span id="cart-count">0</span>
 
                   </div>
@@ -69,87 +77,45 @@
                   <span>+1-202-555-0104</span>
               </div>
           </nav>
+              <div class="top-path">
+        <img src="./assets/icons/House.png" alt="">
+        <a href="index.html">Home</a>  <img src="./assets/icons/CaretRight.png" alt="">
+        <span>Electronics Devices</span>
+      </div>
+    
 </header>
 
+<div class="container-1">
 
 
-    <main class="hero-section">
-    <div class="container">
-        <div class="banner large-banner xbox-banner">
-            <div class="banner-content">
-                <p class="subtitle">— THE BEST PLACE TO PLAY</p>
-                <h2>Xbox Consoles</h2>
-                <p class="description">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-                <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-            </div>
-            <div class="banner-image">
-                <img src="./assets/photos/Image (1).png" alt="Xbox">
-                <span class="price-badge">$299</span>
-            </div>
-        </div>
+  <div class="result-box">
+    <b>65,867</b> Results found.
+  </div>
 
-        <div class="side-banners">
-            <div class="banner small-banner pixel-banner">
-                <div class="banner-content">
-                    <p class="tag">SUMMER SALES</p>
-                    <h3>New Google Pixel 6 Pro</h3>
-                    <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="banner-image">
-                    <img src="./assets/photos/image 5.png" alt="Pixel 6">
-                    <span class="discount-badge">29% OFF</span>
-                </div>
-            </div>
+  <div class="products" id="products"></div>
 
-            <div class="banner small-banner flipbuds-banner">
-                <div class="banner-image">
-                    <img src="./assets/photos/image 4.png" alt="FlipBuds">
-                </div>
-                <div class="banner-content">
-                    <h3>Xiaomi <br> FlipBuds Pro</h3>
-                    <p class="price">$299 USD</p>
-                    <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
+</div>
 
-        <div class="banner large-banner macbook-banner">
-            <div class="banner-content">
-                <span class="save-tag">SAVE UP TO $200.00</span>
-                <h2>Macbook Pro</h2>
-                <p class="description">Apple M1 Max Chip. 32GB Unified Memory, 1TB SSD Storage</p>
-                <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-            </div>
-            <div class="banner-image">
-                <img src="./assets/photos/Image (2).png" alt="Macbook">
-                <span class="price-badge large">$1999</span>
-            </div>
-        </div>
-    </div>
-    <section class="product-showcase">
-        <div class="container showcase-grid" id="showcase-container">
+<div class="pagination">
 
+  <button class="page-btn arrow">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
 
-        </div>
-        <div class="showcase-footer">
-            <a class="btn-all" href="products.html">ALL  <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
+  <button class="page-btn active">01</button>
+  <button class="page-btn">02</button>
+  <button class="page-btn">03</button>
+  <button class="page-btn">04</button>
+  <button class="page-btn">05</button>
+  <button class="page-btn">06</button>
 
-</main>
-<section class="latest-news-section">
-    <div class="news-container-wrapper">
-        <div class="news-main-header">
-            <h2>Latest News</h2>
-        </div>
-        
-        <div class="news-container" id="newsContainer">
+  <button class="page-btn arrow">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
 
+</div>
 
-        </div>
-    </div>
-</section>
-<footer class="footer">
+ <footer class="footer">
   <div class="container footer-grid">
 
     <div class="footer-col">
@@ -243,6 +209,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./script.js"></script>
 </body>
 </html>

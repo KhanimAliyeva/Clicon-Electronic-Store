@@ -34,7 +34,30 @@ body {
     margin-left: 12px;
     cursor: pointer;
 }
+.cart-icon{
+  position: relative;
+}
 
+#cart-count{
+  position: absolute;
+  top: -8px;
+  right: -10px;
+
+  width: 20px;
+  height: 20px;
+
+  background: red;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: bold;
+}
 .main-header {
     background-color: #1B6392;
     padding: 20px 10%;
@@ -440,17 +463,168 @@ body {
     gap: 8px;
 }
 
+  .container-1 {
+    display: block;
+padding: 20px 10%;
+
+    margin: 20px auto;
+  }
+
+
+  a{
+    text-decoration: none ;
+    
+  }
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+  
+  .top-path i { color: #5F6C72; }
+  .top-path span { color: #2DA5F3; }
+
+  .result-box {
+    width: auto;
+    background-color: #F2F4F5; 
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #191C1F;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+  }
+  .result-box b {
+    font-weight: 600;
+    margin-right: 5px;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #E4E7E9;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+  }
+  .card:hover {
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .badge.hot { background: #EE5858; }
+  .badge.best { background: #2DA5F3; }
+  .badge.off { background: #FFD43B; color: #191C1F; }
+  .badge.sale { background: #2DB224; }
+
+  .image-box {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .stars { color: #FA8232; font-size: 12px; }
+  .reviews { color: #77878F; font-size: 12px; }
+
+  .title {
+    font-size: 14px;
+    color: #191C1F;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .price {
+    color: #2DA5F3;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .cart-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(45, 165, 243, 0.4);
+  }
+  .card:hover .cart-btn { opacity: 1; }
+
+
+  /* BREADCRUMB (Home > Electronics) */
+  .top-path {
+    font-size: 13px;
+    color: #77878F;
+    margin-bottom: 20px;
+    height: 60px;
+    padding: 20px 10%;
+    background-color: #F2F4F5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .top-path i { color: #5F6C72; }
+  .top-path span { color: #2DA5F3; }
 
 
 
 .footer {
   background: #0f1419;
   color: #9ca3af;
-  padding: 80px 0 20px;
+  /* padding: 80px 0 20px; */
+  padding: 80px 10%;
+
 }
 
 .footer-grid {
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 1fr 1.3fr;
@@ -683,4 +857,49 @@ margin-top:10px ;
 .read-more:hover {
   background-color: #ff7300;
   color: #fff;
+}
+
+
+/* PAGINATION */
+
+.pagination{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.page-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid #E4E7E9;
+  background:white;
+  color:#5F6C72;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.3s;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.page-btn:hover{
+  border-color:#FA8232;
+  color:#FA8232;
+}
+
+.page-btn.active{
+  background:#FA8232;
+  border-color:#FA8232;
+  color:white;
+}
+
+.page-btn.arrow{
+  color:#FA8232;
+  border:1px solid #FA8232;
 }

@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicon</title>
-    <link rel="shortcut icon" href="./assets/icons/Icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electronics Products</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+body { background-color: #f8f9fa;color: #333; }
+.container-1 { display: flex; gap: 30px; margin: auto;     padding: 20px 10%;
+}
+
+.cart-section { flex: 2; background: #fff; padding: 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.cart-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.cart-table th { text-align: left; font-size: 12px; color: #999; border-bottom: 1px solid #eee; padding: 10px; }
+.cart-table td { padding: 15px 10px; border-bottom: 1px solid #eee; }
+
+.product-info { display: flex; align-items: center; gap: 15px; font-size: 14px; }
+.product-info img { width: 40px; height: 40px; object-fit: cover; }
+.remove-btn { border: 1px solid #ddd; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #999; }
+.remove-btn.red { border-color: #ff4d4d; color: #ff4d4d; }
+
+.quantity-control { display: flex; border: 1px solid #ddd; width: fit-content; }
+.quantity-control button { border: none; background: none; padding: 5px 10px; cursor: pointer; }
+.quantity-control input { width: 40px; border: none; text-align: center; border-left: 1px solid #ddd; border-right: 1px solid #ddd; }
+
+.summary-section { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.card-totals, .coupon-section { background: #fff; padding: 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+.total-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; color: #666; }
+.total-row.final { font-weight: bold; font-size: 18px; color: #000; margin-top: 15px; }
+.cart-footer{ display: flex; justify-content: space-between; margin-top: 20px; }
+button { cursor: pointer; border-radius: 4px; transition: 0.3s; }
+.checkout-btn { width: 100%; padding: 15px; background: #ff8c42; border: none; color: #fff; font-weight: bold; margin-top: 15px; }
+.apply-btn { width: 100%; padding: 10px; background: #3498db; border: none; color: #fff; margin-top: 10px; }
+.btn-secondary { background: none; border: 1px solid #3498db; color: #3498db; padding: 10px 20px; }
+.btn-primary-outline { background: #3498db; border: none; color: #fff; padding: 10px 20px; float: right; }
+.coupon-section input { width: 100%; padding: 10px; border: 1px solid #eee; margin-top: 10px; }
+
+</style>
 </head>
 <body>
-
 <header>
           <div class="top-bar">
               <span>Welcome to Clicon online eCommerce store.</span>
@@ -43,7 +77,8 @@
 
                   <div class="cart-icon">
 
-                    <a href="basket.html"><img src="./assets/icons/ShoppingCartSimple.svg" alt=""></a> 
+                 <a href="basket.html"><img src="./assets/icons/ShoppingCartSimple.svg" alt=""></a> 
+
                       <span id="cart-count">0</span>
 
                   </div>
@@ -69,87 +104,56 @@
                   <span>+1-202-555-0104</span>
               </div>
           </nav>
+              <div class="top-path">
+        <img src="./assets/icons/House.png" alt="">
+        <a href="index.html">Home</a>  <img src="./assets/icons/CaretRight.png" alt="">
+        <span>Shopping Cart</span>
+      </div>
+    
 </header>
 
+ <div class="container-1">
+        <div class="cart-section">
+            <h2>Shopping Card</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>PRODUCTS</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>SUB-TOTAL</th>
+                    </tr>
+                </thead>
+<tbody id="basket-items">                   
 
-
-    <main class="hero-section">
-    <div class="container">
-        <div class="banner large-banner xbox-banner">
-            <div class="banner-content">
-                <p class="subtitle">— THE BEST PLACE TO PLAY</p>
-                <h2>Xbox Consoles</h2>
-                <p class="description">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-                <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-            </div>
-            <div class="banner-image">
-                <img src="./assets/photos/Image (1).png" alt="Xbox">
-                <span class="price-badge">$299</span>
-            </div>
-        </div>
-
-        <div class="side-banners">
-            <div class="banner small-banner pixel-banner">
-                <div class="banner-content">
-                    <p class="tag">SUMMER SALES</p>
-                    <h3>New Google Pixel 6 Pro</h3>
-                    <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="banner-image">
-                    <img src="./assets/photos/image 5.png" alt="Pixel 6">
-                    <span class="discount-badge">29% OFF</span>
-                </div>
-            </div>
-
-            <div class="banner small-banner flipbuds-banner">
-                <div class="banner-image">
-                    <img src="./assets/photos/image 4.png" alt="FlipBuds">
-                </div>
-                <div class="banner-content">
-                    <h3>Xiaomi <br> FlipBuds Pro</h3>
-                    <p class="price">$299 USD</p>
-                    <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
-                </div>
+                </tbody>
+            </table>
+            <div class="cart-footer">
+                <button class="btn-secondary">← RETURN TO SHOP</button>
+                <button class="btn-primary-outline">UPDATE CART</button>
             </div>
         </div>
 
-        <div class="banner large-banner macbook-banner">
-            <div class="banner-content">
-                <span class="save-tag">SAVE UP TO $200.00</span>
-                <h2>Macbook Pro</h2>
-                <p class="description">Apple M1 Max Chip. 32GB Unified Memory, 1TB SSD Storage</p>
-                <button class="shop-now">SHOP NOW <i class="fas fa-arrow-right"></i></button>
+        <div class="summary-section">
+            <div class="card-totals">
+                <h3>Card Totals</h3>
+                <div class="total-row">  <span id="subtotal">$0</span></div>
+                <div class="total-row"><span>Shipping</span> <span>Free</span></div>
+                <div class="total-row"><span>Discount</span> <span>$0</span></div>
+                <div class="total-row"><span>Tax</span> <span>$0</span></div>
+                <hr>
+                <div class="total-row final">  <span id="total">$0</span></div>
+                <button class="checkout-btn">PROCEED TO CHECKOUT →</button>
             </div>
-            <div class="banner-image">
-                <img src="./assets/photos/Image (2).png" alt="Macbook">
-                <span class="price-badge large">$1999</span>
+
+            <div class="coupon-section">
+                <h3>Coupon Code</h3>
+                <input type="email" placeholder="Email address">
+                <button class="apply-btn">APPLY COUPON</button>
             </div>
         </div>
     </div>
-    <section class="product-showcase">
-        <div class="container showcase-grid" id="showcase-container">
-
-
-        </div>
-        <div class="showcase-footer">
-            <a class="btn-all" href="products.html">ALL  <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-
-</main>
-<section class="latest-news-section">
-    <div class="news-container-wrapper">
-        <div class="news-main-header">
-            <h2>Latest News</h2>
-        </div>
-        
-        <div class="news-container" id="newsContainer">
-
-
-        </div>
-    </div>
-</section>
-<footer class="footer">
+  <footer class="footer">
   <div class="container footer-grid">
 
     <div class="footer-col">
@@ -243,6 +247,9 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+
+
+<script src="./script.js"></script>
+<script src="./basket.js"></script>
 </body>
 </html>
