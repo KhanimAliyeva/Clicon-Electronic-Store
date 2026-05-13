@@ -368,7 +368,7 @@ function renderNews() {
         <div class="news-meta">
 
           <img 
-            src="./assets/icons/userCircle.png" 
+            src="./assets/icons/UserCircle.png" 
             alt="${news.author}"
           >
 
